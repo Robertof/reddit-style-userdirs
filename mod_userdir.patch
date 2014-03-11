@@ -1,0 +1,20 @@
+--- modules/mappers/mod_userdir.c.orig	2011-09-23 15:39:32.000000000 +0200
++++ modules/mappers/mod_userdir.c	2014-03-09 13:12:32.287068271 +0100
+@@ -208,7 +208,8 @@
+      * If the URI doesn't match our basic pattern, we've nothing to do with
+      * it.
+      */
+-    if (r->uri[0] != '/' || r->uri[1] != '~') {
++    short int is_special_userdir = r->uri[1] == 'u' && r->uri[2] == '/';
++    if (r->uri[0] != '/' || (r->uri[1] != '~' && is_special_userdir == 0)) {
+         return DECLINED;
+     }
+     server_conf = r->server->module_config;
+@@ -219,6 +220,7 @@
+     }
+ 
+     dname = r->uri + 2;
++    if (is_special_userdir == 1) ++dname;
+     user = ap_getword(r->pool, &dname, '/');
+ 
+     /*
