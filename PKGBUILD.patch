@@ -1,12 +1,12 @@
---- PKGBUILD.orig	2014-03-11 16:45:13.549652167 +0100
-+++ PKGBUILD	2014-03-11 17:34:24.315101824 +0100
+--- PKGBUILD.orig	2014-03-26 23:20:40.932418653 +0100
++++ PKGBUILD	2014-03-27 20:42:54.249370924 +0100
 @@ -34,13 +34,15 @@
      httpd.logrotate
      httpd.service
      arch.layout
 +    mod_userdir.patch
  )
- sha256sums=('64368d8301836815ae237f2b62d909711c896c1bd34573771e0ee5ad808ce71b'
+ sha256sums=('f78cc90dfa47caf3d83ad18fd6b4e85f237777c1733fc9088594b70ce2847603'
              'SKIP'
              '63da1a420f4714a3e7af2672d28384419cc7eedbe7bf35baebd02938fabc15bf'
              '875903831634edf35d8d57e9a51bacb818255ecb3bfff29627f03e43d1ab65c3'
