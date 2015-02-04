@@ -7,7 +7,7 @@ This patch allows Apache to process userdirs prefixed with `/u/`, just like redd
 
 Two patches are available. One works with Arch Linux's PKGBUILD, the second one is the actual patch (which is applied to Apache's source tree).
 
-The patch works with Apache 2.4.10 (should work with >= 2.4), and with the first revision of Arch Linux's Apache 2.4.10 PKGBUILD.
+The patch works with Apache 2.4.12 (should work with >= 2.4), and with apache 2.4.12-2 from the Arch Build System.
 
 Instructions
 ------------
@@ -34,7 +34,27 @@ patch -Np0 -i "/path/to/mod_userdir.patch"
 
 If you downloaded the right version of Apache and you are in the correct directory, the patch is now applied and you can build Apache as explained in the [official documentation](http://httpd.apache.org/docs/2.4/install.html).
 
+Configuring
+-----------
+
+There's no configuration. Think of the `/u/$USER` as an alias of `/~$USER`. Each specific option of userdirs will be applied to reddit-style URLs.
+
+Troubleshooting
+---------------
+
+### The patch is not working! You liar!
+
+Are you *really* sure you are applying the patch to the *exact* Apache version specified in this file? If you need the patch for an older version, please see the commit history.
+
+If you are 100% sure, then open an issue, I'll look into it.
+
+### I'm using Arch Linux, and makepkg complains about GPG signatures.
+
+This is an issue since the latest versions of Apache's PKGBUILD. The source code of Apache is downloaded directly from its website, and thus it is signed by the Apache maintainer. ([check here the name and keys of the maintainers](http://httpd.apache.org/download.cgi#verify))
+
+To fix it, you may either disable the signature checking of makepkg (using `makepkg --skippgpcheck`) or import the maintainer's key. Here's [how to do it](https://wiki.archlinux.org/index.php/Makepkg#Signature_checking).
+
 License
 -------
 
-Since this is a really small patch there's no need to put a license on it. So yeah, public domain!
+Public domain.
