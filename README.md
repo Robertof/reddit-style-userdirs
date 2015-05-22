@@ -7,7 +7,7 @@ This patch allows Apache to process userdirs prefixed with `/u/`, just like redd
 
 Two patches are available. One works with Arch Linux's PKGBUILD, the second one is the actual patch (which is applied to Apache's source tree).
 
-The patch works with Apache 2.4.12 (should work with >= 2.4), and with apache 2.4.12-2 from the Arch Build System.
+The patch works with Apache 2.4.12 (should work with >= 2.4), and with apache 2.4.12-4 from the Arch Build System.
 
 Instructions
 ------------
