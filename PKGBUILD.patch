@@ -1,28 +1,27 @@
---- PKGBUILD.orig	2015-07-17 18:15:58.738700277 +0200
-+++ PKGBUILD	2015-07-17 18:17:23.339859981 +0200
-@@ -35,6 +35,7 @@
+--- PKGBUILD.orig	2015-10-22 22:41:20.888813980 +0200
++++ PKGBUILD	2015-10-22 22:44:09.231296976 +0200
+@@ -35,13 +35,15 @@
+     httpd.logrotate
      httpd.service
      arch.layout
-     lua53_fixes.patch
 +    mod_userdir.patch
  )
- sha256sums=('ac660b47aaa7887779a6430404dcb40c0b04f90ea69e7bd49a40552e9ff13743'
+ sha256sums=('331e035dec81d3db95b048f036f4d7b1a97ec8daa5b377bde42d4ccf1f2eb798'
              'SKIP'
-@@ -42,7 +43,8 @@
+             '63da1a420f4714a3e7af2672d28384419cc7eedbe7bf35baebd02938fabc15bf'
              '875903831634edf35d8d57e9a51bacb818255ecb3bfff29627f03e43d1ab65c3'
              '14d0a775eea7f8c66ba55399a9ad1e4fd29e0302f479a15b28bbfc754c5aa347'
-             'dda05c6e76f12624e418ca18a36f2e90ec1c5b1cc52fed7142fce6076ec413f3'
--            'de613a4903848ee103b73f5381a366281a62c0006dc8d2b1ebd919ddffb05398')
-+            'de613a4903848ee103b73f5381a366281a62c0006dc8d2b1ebd919ddffb05398'
+-            'dda05c6e76f12624e418ca18a36f2e90ec1c5b1cc52fed7142fce6076ec413f3')
++            'dda05c6e76f12624e418ca18a36f2e90ec1c5b1cc52fed7142fce6076ec413f3'
 +            'aaf843dd27c19e38d390109551e84834dca49d87bba71210edc719e67a596acf')
  validpgpkeys=('A93D62ECC3C8EA12DB220EC934EA76E6791485A8') # Jim Jagielski
  
  prepare() {
-@@ -55,6 +57,7 @@
+@@ -53,6 +55,7 @@
+       -i docs/conf/httpd.conf.in
  
    cat "${srcdir}/arch.layout" >> config.layout
- 
 +  patch -Np0 -i "${srcdir}/mod_userdir.patch"
-   patch -p3 < ../lua53_fixes.patch
  }
  
+ build() {
