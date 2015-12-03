@@ -1,5 +1,5 @@
---- PKGBUILD.orig	2015-11-18 19:27:37.685164061 +0100
-+++ PKGBUILD	2015-11-18 19:28:34.662030538 +0100
+--- PKGBUILD.orig	2015-12-03 20:19:31.121732955 +0100
++++ PKGBUILD	2015-12-03 20:20:57.615042682 +0100
 @@ -38,6 +38,7 @@
      # bugfix for https://bz.apache.org/bugzilla/show_bug.cgi?id=57785
      # taken from https://github.com/apache/httpd/commit/7feb3c0999927f9d0d16f37c7bed13b58c09162f
@@ -10,7 +10,7 @@
              'SKIP'
 @@ -45,7 +46,8 @@
              '875903831634edf35d8d57e9a51bacb818255ecb3bfff29627f03e43d1ab65c3'
-             '2c6fc6fabc7fb113650690ce4e9347e54c4d2124b2975c7d671720169c990398'
+             '4d16b6ddeafbc94bc7109017be61788064f455c7ab453cce19a35a30a1f5e64f'
              'dda05c6e76f12624e418ca18a36f2e90ec1c5b1cc52fed7142fce6076ec413f3'
 -            'eb9033e039e24cd443c861af0853dd8a8f7369170a393ef25fd31a627f6d40db')
 +            'eb9033e039e24cd443c861af0853dd8a8f7369170a393ef25fd31a627f6d40db'
