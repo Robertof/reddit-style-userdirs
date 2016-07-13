@@ -1,12 +1,12 @@
---- PKGBUILD.orig	2016-05-05 17:17:41.079752886 +0200
-+++ PKGBUILD	2016-05-05 17:18:32.012491191 +0200
+--- PKGBUILD.orig	2016-07-13 18:00:54.359405217 +0200
++++ PKGBUILD	2016-07-13 18:02:36.164898835 +0200
 @@ -35,13 +35,15 @@
      httpd.logrotate
      httpd.service
      arch.layout
 +    mod_userdir.patch
  )
- sha256sums=('0e76a375ed3dbac636f50ac39de966ece443751fe4d62392f9a360a19d94d0da'
+ sha256sums=('0c1694b2aad7765896faf92843452ee2555b9591ae10d4f19b245f2adfe85e58'
              'SKIP'
              '63da1a420f4714a3e7af2672d28384419cc7eedbe7bf35baebd02938fabc15bf'
              '0bbbfae23a917b2fce0bf8f900f60319b50769224a96314e9301a75ccd078e16'
